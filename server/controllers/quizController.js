@@ -22,6 +22,30 @@ function addOne(req, res, next) {
   Models.Quiz
     .create(quizToAdd)
     .then((quiz) => {
+
+      req.body.questions.forEach((question, index) => {
+        const questionToAdd = {
+          question,
+          quizId: quiz.id
+        }
+
+        Models.Question
+          .create(questionToAdd)
+          .then((question) => {
+            req.body.answers[index].forEach((answer) => {
+              const answerToAdd = {
+                answer,
+                questionId: question.id
+              }
+
+              Models.Answer
+                .create(answerToAdd)
+                .then(answer => console.log('success'))
+            })
+          })
+      })
+
+      // Models.question
       // also create answers
       // only need to send back quiz info - then update state
       res.status(200).send(quiz);

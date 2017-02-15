@@ -5,8 +5,8 @@ const Question = db.define('question', {
   question: {
     type: Sequelize.STRING,
   },
-  description: {
-    type: Sequelize.STRING,
+  quizId: {
+    type: Sequelize.INTEGER,
   },
 });
 

@@ -19,9 +19,9 @@ const ShowQuestion = (props) => {
         <h3 className="panel-title">{props.question}</h3>
       </div>
 
-      <div className="panel-body answer">
-        {answersArr}
-      </div>
+      <form className="panel-body answer">
+          {answersArr}
+      </form>
 
     </div>
   )

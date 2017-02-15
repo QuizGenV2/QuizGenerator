@@ -109,6 +109,7 @@ class App extends Component {
         name: localState.quizTitle,
         description: localState.quizDesc,
         questions: localState.questions,
+        answers: localState.answers
       }),
       headers: {
         'Accept': 'application/json',
