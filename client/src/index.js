@@ -12,6 +12,7 @@ import NewQuiz from './components/NewQuiz.jsx';
 import ShowQuiz from './components/ShowQuiz.jsx';
 import NotFound from './components/NotFound.jsx';
 import Logout from './components/Logout.jsx';
+import TakeQuiz from './components/TakeQuiz.jsx';
 
 ReactDOM.render((
   <Router history={browserHistory}>
@@ -27,6 +28,7 @@ ReactDOM.render((
           <Route path=':id' component={ShowQuiz} />
         </Route>
       </Route>
+      <Route path='quiz/:id' component={TakeQuiz} />
       <Route path='*' component={NotFound} />
     </Route>
   </Router>

@@ -10,6 +10,7 @@ class ShowQuiz extends React.Component {
       quiz: {
         questions: []
       },
+      
     };
   };
 
@@ -38,7 +39,7 @@ class ShowQuiz extends React.Component {
         />
       );
     });
-
+console.log('state right now fuck', this.state.quiz)
     return (
       <div className="container">
         <div className="row">

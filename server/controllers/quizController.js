@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
+const uuidV4 = require('uuid/v4');
 const Models = require('../models');
 
 // get all quizzes
@@ -17,6 +18,7 @@ function addOne(req, res, next) {
   const quizToAdd = {
     name: req.body.name,
     description: req.body.description,
+    link: uuidV4(),
   };
 
   Models.Quiz
